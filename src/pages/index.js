@@ -11,6 +11,8 @@ import serviceImg4 from '../../public/wightloss.jpg';
 import instaIcon from '../../public/instagram.png';
 import linkedinIcon from '../../public/linkedin.png';
 import facebookIcon from '../../public/facebook.png';
+import locationIcon from '../../public/location.png';
+import phoneIcon from '../../public/phone.png';
 import logoImg from '../../public/logo.png';
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></link>
 
@@ -52,26 +54,26 @@ const navData = {
 }
 
 
-const footerData = {
-  text: 'Vivify offers a weekly schedule of classes for every level. Whether you want to dial up the intensity or take a more relaxed approach, we’ve got a class with a spot just for you. Create your own personalized schedule by choosing the classes that suit your needs',
-  iconList: [
-    {
-      id: 1,
-      icon: instaIcon,
-      link: ''
-    },
-    {
-      id: 2,
-      icon: linkedinIcon,
-      link: ''
-    },
-    {
-      id: 3,
-      icon: facebookIcon,
-      link: ''
-    },
-  ]
-}
+// const footerData = {
+//   text: 'Vivify offers a weekly schedule of classes for every level. Whether you want to dial up the intensity or take a more relaxed approach, we’ve got a class with a spot just for you. Create your own personalized schedule by choosing the classes that suit your needs',
+//   iconList: [
+//     {
+//       id: 1,
+//       icon: instaIcon,
+//       link: ''
+//     },
+//     {
+//       id: 2,
+//       icon: linkedinIcon,
+//       link: ''
+//     },
+//     {
+//       id: 3,
+//       icon: facebookIcon,
+//       link: ''
+//     },
+//   ]
+// }
 const ServicesData1 = {
   title: 'ZUMBA',
   description: ` Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness .`,
@@ -95,6 +97,96 @@ const ServicesData4 = {
 coordination and adjustments to fit a range of skill levels, from beginner to advanced. Make a reservation right now and pamper yourself; you deserve it!`,
   img: serviceImg4
 }
+const footerData = [
+  //  . 
+  {
+    id: 1,
+    fTitle: 'Vivify Fitness Studio',
+    primary:true,
+    fDescription: [
+      {
+        id: 1,
+        text: 'Vivify offers a weekly schedule of classes for every level. Whether you want to dial up the intensity or take a more relaxed approach, we’ve got a class with a spot just for you.'
+      },
+      {
+        id: 2,
+        text: 'Create your own personalized schedule by choosing the classes that suit your needs'
+      },
+      {
+        id: 3,
+        buttonText: 'Vist our recent work'
+      },
+    ]
+  },
+  {
+    id: 2,
+    fTitle: 'Important Links',
+    fDescription: [
+      {
+        id: 1,
+        text: 'Home'
+      },
+      {
+        id: 2,
+        text: 'About'
+      },
+      {
+        id: 3,
+        text: 'Product',
+      },
+      {
+        id: 4,
+        text: 'Blog',
+      },
+    ]
+  },
+  {
+    id: 3,
+    fTitle: 'Quick Links',
+    fDescription: [
+      {
+        id: 1,
+        text: 'Home'
+      },
+      {
+        id: 2,
+        text: 'About'
+      },
+      {
+        id: 3,
+        text: 'Product',
+      },
+      {
+        id: 4,
+        text: 'Blog',
+      },
+    ]
+  },
+  {
+    id: 4,
+    fTitle: 'Address',
+    fDescription: [
+      {
+        id: 1,
+        text: 'madurai tamilnadu',
+        icon: locationIcon,
+      },
+      {
+        id: 2,
+        text: '+91 8368379373',
+        icon: phoneIcon,
+      },
+      {
+        id: 3,
+        iconList: [
+          instaIcon,
+          linkedinIcon,
+          facebookIcon
+        ]
+      },
+    ]
+  }
+]
 
 export default function Home() {
   return (

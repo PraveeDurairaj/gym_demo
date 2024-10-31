@@ -21,9 +21,16 @@ const [show , setShow] = useState(false)
                     }
                 </div>
             </div>
+            <div className='flex justify-between'>
+          
+            <div>
+            <Image src={staticContent?.logo} className='w-[35px] h-[35px] rounded-full m-b-[15px] hidden showHidden'></Image>
+            </div>
             <div onClick={()=>{setShow(!show)}}>
                 <Image src={menuIcon} width={30} height={30} className='hidden showHidden'></Image>
             </div>
+            </div>
+          
             <div className={`hidden absolute text-white p-4 bg-[#141314] ${show && 'showHidden'} z-40 left-0 h-screen top-0`}>
             <div className=' flex  text-white  flex-col w-[250px]  h-full'>
                 <div className='flex justify-between mb-[20px]'>

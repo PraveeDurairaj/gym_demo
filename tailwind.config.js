@@ -21,7 +21,11 @@ module.exports = {
         sm: '2rem',
       },
     },
-    extend: {},
+    extend: {
+      backgroundSize:{
+        "full":'100% 100%'
+      }
+    },
   },
   plugins: [],
 }

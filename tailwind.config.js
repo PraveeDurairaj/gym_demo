@@ -22,6 +22,9 @@ module.exports = {
       },
     },
     extend: {
+      colors:{
+      primary:'#14a91a'
+      },
       backgroundSize:{
         "full":'100% 100%'
       }

@@ -1,9 +1,12 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Services from "@/Componets/Services/Services";
 import Footer from "@/Componets/Footer/Footer";
 import Hero from "@/Componets/Hero/Hero";
 import Nav from "@/Componets/Nav/Nav";
+import Review from "@/Componets/Review/Review";
 import serviceImg1 from '../../public/zumba.jpg';
 import serviceImg2 from '../../public/cardio.jpg';
 import serviceImg3 from '../../public/aerobics.jpg';
@@ -14,6 +17,9 @@ import facebookIcon from '../../public/facebook.png';
 import locationIcon from '../../public/location.png';
 import phoneIcon from '../../public/phone.png';
 import logoImg from '../../public/logo.png';
+import client from '../../public/clientImg1.jpg';
+import client2 from '../../public/clientImg2.jpg';
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></link>
 
 
@@ -47,33 +53,12 @@ const navData = {
     },
     {
       id: 4,
-      text: 'contact',
+      buttonText: 'contact',
       link: ''
     },
   ]
 }
 
-
-// const footerData = {
-//   text: 'Vivify offers a weekly schedule of classes for every level. Whether you want to dial up the intensity or take a more relaxed approach, we’ve got a class with a spot just for you. Create your own personalized schedule by choosing the classes that suit your needs',
-//   iconList: [
-//     {
-//       id: 1,
-//       icon: instaIcon,
-//       link: ''
-//     },
-//     {
-//       id: 2,
-//       icon: linkedinIcon,
-//       link: ''
-//     },
-//     {
-//       id: 3,
-//       icon: facebookIcon,
-//       link: ''
-//     },
-//   ]
-// }
 const ServicesData1 = {
   title: 'ZUMBA',
   description: ` Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness .`,
@@ -187,6 +172,32 @@ const footerData = [
     ]
   }
 ]
+const reviewData = [
+  {
+    id:1,
+    img:client,
+    name:'praveen',
+    review:'achieve both physical and mental well-being. With this you can develop a strong physique that'
+  },
+  {
+    id:1,
+    img:client2,
+    name:'karthick',
+    review:'achieve both physical and mental well-being. With this you can develop a strong physique that'
+  },
+  {
+    id:1,
+    img:client,
+    name:'deepak',
+    review:'achieve both physical and mental well-being. With this you can develop a strong physique that well-being. With this you can develop a strong physique that'
+  },
+  {
+    id:1,
+    img:client2,
+    name:'praveen',
+    review:'achieve both physical and mental well-being. With this you can develop a strong physique that well-being. With this you can develop a strong physique thatwell-being. With this you can develop a strong physique that'
+  },
+]
 
 export default function Home() {
   return (
@@ -198,9 +209,9 @@ export default function Home() {
       <div className="my-[50px]"></div>
       <Services staticContent={ServicesData2} changeOrder={true} />
       <div className="my-[50px]"></div>
-      <Services staticContent={ServicesData3} />
-      <div className="my-[50px]"></div>
-      <Services staticContent={ServicesData4} changeOrder={true} />
+      <Review
+       staticContent={reviewData}
+       title={'Real stories Real results'}/>
       <div className="my-[50px]"></div>
       <Footer staticContent={footerData} />
     </>

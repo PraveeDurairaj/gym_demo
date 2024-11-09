@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import menuIcon from '../../../public/menu.png'
+import PrimaryButton from '../PrimaryButton/PrimaryButton';
 
 const Nav = ({ staticContent }) => {
     
@@ -15,7 +16,8 @@ const [show , setShow] = useState(false)
                     {
                         staticContent?.navList?.map((data) => {
                             return (
-                                <a key={data?.id} href={data?.link} className='hover:text-[#14a91a]'>{data?.text}</a>
+                                data?.buttonText ? <> <PrimaryButton buttonText={data?.buttonText}/></> :
+                                <a key={data?.id} href={data?.link} className='hover:text-primary'>{data?.text}</a>
                             )
                         })
                     }
@@ -41,7 +43,8 @@ const [show , setShow] = useState(false)
                     {
                         staticContent?.navList?.map((data) => {
                             return (
-                                <a key={data?.id} href={data?.link} className='hover:text-[#14a91a]'>{data?.text}</a>
+                                data?.buttonText ? <> <PrimaryButton buttonText={data?.buttonText}/></> :
+                                <a key={data?.id} href={data?.link} className='hover:text-primary'>{data?.text}</a>
                             )
                         })
                     }

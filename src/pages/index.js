@@ -5,6 +5,7 @@ import Footer from "@/Componets/Footer/Footer";
 import Hero from "@/Componets/Hero/Hero";
 import Nav from "@/Componets/Nav/Nav";
 import Review from "@/Componets/Review/Review";
+import Services from "@/Componets/Services/Services";
 import instaIcon from '../../public/instagram.png';
 import linkedinIcon from '../../public/linkedin.png';
 import facebookIcon from '../../public/facebook.png';
@@ -13,12 +14,9 @@ import phoneIcon from '../../public/phone.png';
 import logoImg from '../../public/logo.png';
 import client from '../../public/clientImg1.jpg';
 import client2 from '../../public/clientImg2.jpg';
-import Services from "@/Componets/Services/Services";
-
+import aboutImg from '../../public/about.webp';
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></link>
 
-
-// const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
 //   weight: "100 900",
@@ -53,8 +51,6 @@ const navData = {
     },
   ]
 }
-
-
 const footerData = [
   //  . 
   {
@@ -172,17 +168,26 @@ const reviewData = [
   },
 ]
 
+const aboutData = {
+  title: 'About us',
+  description: ` Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness .`,
+  img: aboutImg
+}
+
 export default function Home() {
   return (
     <>
       <Nav staticContent={navData} />
       <Hero />
       <div className="my-[50px]"></div>
+      <ServicesCard staticContent={aboutData} aboutSection />
+      <div className="my-[50px]"></div>
       <Services title={"Our Services"}/>
       <div className="my-[50px]"></div>
       <Review
        staticContent={reviewData}
-       title={'Real stories Real results'}/>
+       title={'Real stories Real results'}
+       />
       <div className="my-[50px]"></div>
       <Footer staticContent={footerData} />
     </>

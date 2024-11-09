@@ -11,12 +11,12 @@ const Footer = ({ staticContent }) => {
                 staticContent?.map((data) => {
                     return (
                         <div key={data?.id}>
-                            <h6 className={`text-[16px] font-[600] mb-[15px] ${data?.primary ? 'text-primary' : 'text-[#70767C]'}`}>{data?.fTitle}</h6>
+                            <h6 className={`text-[16px] font-[600] mb-[15px] ${data?.primary ? 'text-theme' : 'text-[#70767C]'}`}>{data?.fTitle}</h6>
                             {
                                 data?.fDescription?.map((item) => {
                                     return (
                                         <>
-                                            {item?.text && <p key={item?.id} className=' text-[14px] mb-[10px] flex gap-2 items-center justify-start cursor-pointer hover:text-primary'>{item?.icon && <Image src={item?.icon} alt='footerIcon' className='w-[15px] h-[15px] footerIcon'></Image>}{item?.text} </p>}
+                                            {item?.text && <p key={item?.id} className=' text-[14px] mb-[10px] flex gap-2 items-center justify-start cursor-pointer hover:text-theme'>{item?.icon && <Image src={item?.icon} alt='footerIcon' className='w-[15px] h-[15px] footerIcon'></Image>}{item?.text} </p>}
                                             {/* {item?.buttonText && <Button text={item?.buttonText} />} */}
                                             {item?.iconList && <div className='flex gap-4'>
                                                 {item?.iconList?.map((icon)=>{

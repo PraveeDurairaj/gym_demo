@@ -7,10 +7,10 @@ const Review = ({staticContent,title}) => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 6000,
-    autoplaySpeed: 6000,
+    speed: 15000,
+    autoplaySpeed: 0,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     arrows: false,
     autoplay: true,
     cssEase: "linear",
@@ -31,7 +31,6 @@ const Review = ({staticContent,title}) => {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
         }
       }
     ]

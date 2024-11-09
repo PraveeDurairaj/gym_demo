@@ -23,7 +23,7 @@ module.exports = {
     },
     extend: {
       colors:{
-      primary:'#14a91a'
+      theme:'var(--theme)',
       },
       backgroundSize:{
         "full":'100% 100%'

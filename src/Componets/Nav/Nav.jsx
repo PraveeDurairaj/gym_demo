@@ -17,7 +17,7 @@ const [show , setShow] = useState(false)
                         staticContent?.navList?.map((data) => {
                             return (
                                 data?.buttonText ? <> <PrimaryButton buttonText={data?.buttonText}/></> :
-                                <a key={data?.id} href={data?.link} className='hover:text-primary'>{data?.text}</a>
+                                <a key={data?.id} href={data?.link} className='hover:text-theme'>{data?.text}</a>
                             )
                         })
                     }
@@ -44,7 +44,7 @@ const [show , setShow] = useState(false)
                         staticContent?.navList?.map((data) => {
                             return (
                                 data?.buttonText ? <> <PrimaryButton buttonText={data?.buttonText}/></> :
-                                <a key={data?.id} href={data?.link} className='hover:text-primary'>{data?.text}</a>
+                                <a key={data?.id} href={data?.link} className='hover:text-theme'>{data?.text}</a>
                             )
                         })
                     }

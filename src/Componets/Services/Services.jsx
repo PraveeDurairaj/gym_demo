@@ -1,20 +1,63 @@
 import React from 'react';
-import Image from 'next/image';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import ServicesCard from './ServicesCart';
+import serviceImg1 from '../../../public/zumba.jpg';
+import serviceImg2 from '../../../public/cardio.jpg';
+import serviceImg3 from '../../../public/aerobics.jpg';
+import serviceImg4 from '../../../public/wightloss.jpg';
 
-const Services = ({ staticContent, changeOrder }) => {
+const ServicesData1 = {
+    title: 'ZUMBA',
+    description: ` Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness .`,
+    img: serviceImg1
+}
+const ServicesData2 = {
+    title: 'CARDIO',
+    description: `Cardiovascular exercise is essential for maintaining a healthy heart, improving stamina, and boosting overall well-being.
+   Regular cardio exercise can reduce the risk of chronic diseases, help manage weight, and improve mood and sleep quality.​`,
+    img: serviceImg2
+}
+const ServicesData3 = {
+    title: 'AEROBICS',
+    description: `​Aerobics is a form of physical exercise that combines rhythmic aerobic exercise with stretching and strength training routines. 
+  The primary goal is to improve all elements of fitness, including flexibility, muscular strength, and cardiovascular fitness.​`,
+    img: serviceImg3
+}
+const ServicesData4 = {
+    title: 'WEIGHT LOSS / GAIN',
+    description: `​﻿Join us to achieve both physical and mental well-being. With this you can develop a strong physique that will enable them to go into more advanced phases, such as a variety of 
+  coordination and adjustments to fit a range of skill levels, from beginner to advanced. Make a reservation right now and pamper yourself; you deserve it!`,
+    img: serviceImg4
+}
+const Services = ({title}) => {
     return (
-        <div className='bg-black text-white p-3'>
-            <div className='container grid sm:grid-cols-1 md:grid-cols-2 gap-5 items-center'>
-                <div className={changeOrder ? 'sm:order-2 md:order-2' : 'sm:order-2 md:order-1'}>
-                    <h5 className=' font-[700] sm:text-[28px]  md:text-[32px] mb-[20px]'>{staticContent?.title}</h5>
-                    <p className='sm:text-[16px] md:text-[18px]'>{staticContent?.description}</p>
-                    <p className='sm:text-[16px] md:text-[18px]'>{staticContent?.description}</p>
-                </div>
-                <div className={changeOrder ? 'sm:order-1 md:order-1' : 'sm:order-1 md:order-2'}>
-                    <Image src={staticContent?.img} alt='img' className='w-max-[450px] w-full sm:h-[250px] md:h-[300px] rounded-[10px]'></Image>
-                </div>
+        <>
+            <div className='container'>
+                <h2 className='sm:text-[32px] md:text-[40px] font-[700] text-center mb-6'>{title}</h2>
             </div>
-        </div>
+            <div>
+                <Tabs
+                    defaultActiveKey="CARDIO"
+                    id="uncontrolled-tab-example"
+                    transition={false}
+                    className="mb-3"
+                >
+                    <Tab eventKey="ZUMBA" title="ZUMBA">
+                        <ServicesCard staticContent={ServicesData1} />
+                    </Tab>
+                    <Tab eventKey="CARDIO" title="CARDIO">
+                        <ServicesCard staticContent={ServicesData2} changeOrder={true} />
+                    </Tab>
+                    <Tab eventKey="AEROBICS" title="AEROBICS">
+                        <ServicesCard staticContent={ServicesData3} />
+                    </Tab>
+                    <Tab eventKey="WEIGHT LOSS / GAIN" title="WEIGHT LOSS / GAIN">
+                        <ServicesCard staticContent={ServicesData4} changeOrder={true} />
+                    </Tab>
+                </Tabs>
+            </div>
+        </>
 
     )
 }

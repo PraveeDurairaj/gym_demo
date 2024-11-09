@@ -38,7 +38,7 @@ const Services = ({title}) => {
             </div>
             <div>
                 <Tabs
-                    defaultActiveKey="CARDIO"
+                    defaultActiveKey="ZUMBA"
                     id="uncontrolled-tab-example"
                     transition={false}
                     className="mb-3"

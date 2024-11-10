@@ -6,6 +6,8 @@ import Hero from "@/Componets/Hero/Hero";
 import Nav from "@/Componets/Nav/Nav";
 import Review from "@/Componets/Review/Review";
 import Services from "@/Componets/Services/Services";
+import Turst from "@/Componets/Turst/Turst";
+import Pricing from "@/Componets/Pricing/Pricing";
 import instaIcon from '../../public/instagram.png';
 import linkedinIcon from '../../public/linkedin.png';
 import facebookIcon from '../../public/facebook.png';
@@ -15,7 +17,6 @@ import logoImg from '../../public/logo.png';
 import client from '../../public/clientImg1.jpg';
 import client2 from '../../public/clientImg2.jpg';
 import aboutImg from '../../public/about.webp';
-import Turst from "@/Componets/Turst/Turst";
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></link>
 
 //   src: "./fonts/GeistVF.woff",
@@ -186,6 +187,8 @@ export default function Home() {
       <ServicesCard staticContent={aboutData} aboutSection />
       <div className="my-[50px]"></div>
       <Services title={"Our Services"}/>
+      <div className="my-[50px]"></div>
+      <Pricing/>
       <div className="my-[50px]"></div>
       <Review
        staticContent={reviewData}

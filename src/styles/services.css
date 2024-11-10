@@ -13,7 +13,7 @@
 .nav-tabs .nav-link{
 border: none;
 color: white;
-border-radius: 50px;
+border-radius: 100px;
 
 }
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{

@@ -15,6 +15,7 @@ import logoImg from '../../public/logo.png';
 import client from '../../public/clientImg1.jpg';
 import client2 from '../../public/clientImg2.jpg';
 import aboutImg from '../../public/about.webp';
+import Turst from "@/Componets/Turst/Turst";
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></link>
 
 //   src: "./fonts/GeistVF.woff",
@@ -179,6 +180,8 @@ export default function Home() {
     <>
       <Nav staticContent={navData} />
       <Hero />
+      <div className="my-[50px]"></div>
+      <Turst/>
       <div className="my-[50px]"></div>
       <ServicesCard staticContent={aboutData} aboutSection />
       <div className="my-[50px]"></div>

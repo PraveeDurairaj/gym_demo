@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrimaryButton = ({buttonText,containerClass}) => {
   return (
-    <button className={`bg-theme font-[500] text-white px-[20px] py-[5px] rounded-full ${containerClass && buttonText}`}>{buttonText}</button>
+    <button className={`bg-theme font-[600] text-black px-[20px] py-[10px] rounded-full ${containerClass && containerClass}`}>{buttonText}</button>
   )
 }
 

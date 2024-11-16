@@ -8,15 +8,7 @@ import Review from "@/Componets/Review/Review";
 import Services from "@/Componets/Services/Services";
 import Turst from "@/Componets/Turst/Turst";
 import Pricing from "@/Componets/Pricing/Pricing";
-import instaIcon from '../../public/instagram.png';
-import linkedinIcon from '../../public/linkedin.png';
-import facebookIcon from '../../public/facebook.png';
-import locationIcon from '../../public/location.png';
-import phoneIcon from '../../public/phone.png';
-import logoImg from '../../public/logo.png';
-import client from '../../public/clientImg1.jpg';
-import client2 from '../../public/clientImg2.jpg';
-import aboutImg from '../../public/about.webp';
+import {getDemoData} from '../Helper/getStaticData';
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></link>
 
 //   src: "./fonts/GeistVF.woff",
@@ -28,167 +20,21 @@ import aboutImg from '../../public/about.webp';
 //   variable: "--font-geist-mono",
 //   weight: "100 900",
 // });
-const navData = {
-  logo: logoImg,
-  navList: [
-    {
-      id: 1,
-      text: 'home',
-      link: ''
-    },
-    {
-      id: 2,
-      text: 'Services',
-      link: ''
-    },
-    {
-      id: 3,
-      text: 'Reviews',
-      link: ''
-    },
-    {
-      id: 4,
-      buttonText: 'contact',
-      link: ''
-    },
-  ]
-}
-const footerData = [
-  //  . 
-  {
-    id: 1,
-    fTitle: 'Vivify Fitness Studio',
-    primary:true,
-    fDescription: [
-      {
-        id: 1,
-        text: 'Vivify offers a weekly schedule of classes for every level. Whether you want to dial up the intensity or take a more relaxed approach, we’ve got a class with a spot just for you.'
-      },
-      {
-        id: 2,
-        text: 'Create your own personalized schedule by choosing the classes that suit your needs'
-      },
-      {
-        id: 3,
-        buttonText: 'Vist our recent work'
-      },
-    ]
-  },
-  {
-    id: 2,
-    fTitle: 'Important Links',
-    fDescription: [
-      {
-        id: 1,
-        text: 'Home'
-      },
-      {
-        id: 2,
-        text: 'About'
-      },
-      {
-        id: 3,
-        text: 'Product',
-      },
-      {
-        id: 4,
-        text: 'Blog',
-      },
-    ]
-  },
-  {
-    id: 3,
-    fTitle: 'Quick Links',
-    fDescription: [
-      {
-        id: 1,
-        text: 'Home'
-      },
-      {
-        id: 2,
-        text: 'About'
-      },
-      {
-        id: 3,
-        text: 'Product',
-      },
-      {
-        id: 4,
-        text: 'Blog',
-      },
-    ]
-  },
-  {
-    id: 4,
-    fTitle: 'Address',
-    fDescription: [
-      {
-        id: 1,
-        text: 'madurai tamilnadu',
-        icon: locationIcon,
-      },
-      {
-        id: 2,
-        text: '+91 8368379373',
-        icon: phoneIcon,
-      },
-      {
-        id: 3,
-        iconList: [
-          instaIcon,
-          linkedinIcon,
-          facebookIcon
-        ]
-      },
-    ]
-  }
-]
-const reviewData = [
-  {
-    id:1,
-    img:client,
-    name:'praveen',
-    review:'achieve both physical and mental well-being. With this you can develop a strong physique that'
-  },
-  {
-    id:1,
-    img:client2,
-    name:'karthick',
-    review:'achieve both physical and mental well-being. With this you can develop a strong physique that'
-  },
-  {
-    id:1,
-    img:client,
-    name:'deepak',
-    review:'achieve both physical and mental well-being. With this you can develop a strong physique that well-being. With this you can develop a strong physique that'
-  },
-  {
-    id:1,
-    img:client2,
-    name:'praveen',
-    review:'achieve both physical and mental well-being. With this you can develop a strong physique that well-being. With this you can develop a strong physique thatwell-being. With this you can develop a strong physique that'
-  },
-]
-
-const aboutData = {
-  title: 'About us',
-  description: ` Zumba is a fitness program that combines Latin and international music with dance moves. Zumba routines incorporate interval training — alternating fast and slow rhythms — to help improve cardiovascular fitness .`,
-  img: aboutImg
-}
 
 export default function Home() {
+  const {aboutData, reviewData,navData,footerData,trustData,serviceData,heroData} = getDemoData();
   return (
     <>
       <Nav staticContent={navData} />
-      <Hero />
+      <Hero staticContent={heroData} />
       <div className="my-[50px]"></div>
-      <Turst/>
+      <Turst staticContent={trustData}/>
       <div className="my-[50px]"></div>
       <ServicesCard staticContent={aboutData} aboutSection />
       <div className="my-[50px]"></div>
-      <Services title={"Our Services"}/>
+      <Services title={"Our Services"} staticContent={serviceData} />
       <div className="my-[50px]"></div>
-      <Pricing/>
+      <Pricing title = {'Choose Right Plan to get Stronger'}/>
       <div className="my-[50px]"></div>
       <Review
        staticContent={reviewData}

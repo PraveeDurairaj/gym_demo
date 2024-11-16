@@ -21,17 +21,22 @@ border-radius: 100px;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
     background: var(--theme);
-    color: white;
     border: none;
 }
 
 @media screen and (max-width:767px) {
     .nav-tabs .nav-link,.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
         border: 1px solid var(--theme);
+        border-radius: 10px;
+    }
+    .nav-tabs .nav-link{
+        border-radius: 10px;
     }
     #uncontrolled-tab-example{
        width: 100%;
        padding: 10px;
        row-gap: 10px;
+       border-radius: 10px;
+       margin: 0px 10px;
     }
 }

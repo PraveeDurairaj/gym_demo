@@ -6,7 +6,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --theme:#14a91a;
+  --theme:#ffe400;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,11 +26,10 @@ body {
   filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(923%) hue-rotate(87deg) brightness(93%) contrast(87%);
 }
 .hero{
-  background: url('../../public/hero.png');
+  background: url('../../public/hero2.jpg');
 }
 .themeLinear{
-  background: #31FB0E;
-background: linear-gradient(to right, #31FB0E 39%, #4DD028 50%, #B7FCB3 100%);
+background: linear-gradient(to right, #d7fb0e 39%, #d2e735 50%, #f1fcb3 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 display: inline;

@@ -13,8 +13,8 @@ const pricingData = {
 }
 const PricingCard = ({primary}) => {
   return (
-    <div className={`p-4 rounded-[10px] shadow-xl  max-w-[320px] mx-auto border border-theme ${primary ? "bg-gradient-to-br from-lime-500 to-slate-200" : 'bg-white'}`}>
-      <span className='px-[10px] rounded-[20px] bg-slate-200 text-theme inline-block text-[14px] mb-2'>{pricingData?.pricingName}</span>
+    <div className={`p-4 rounded-[10px]  max-w-[320px] mx-auto border border-theme ${primary ? "bg-black text-white shadow-xl scale-y-110" : 'bg-white'}`}>
+      <span className={`px-[12px] py-[3px] rounded-[20px] bg-slate-200 text-theme inline-block text-[14px] mb-2 ${primary ? 'bg-white text-black': 'bg-theme text-black'}`}>{pricingData?.pricingName}</span>
       <p className='text-[30px] font-[500] mb-3'>{pricingData?.amount} <span className='text-[14px]'>/ month</span></p>
       <p className='text-[13px] mb-2'>{pricingData?.description}</p>
       <div className='mb-3'>
@@ -29,7 +29,7 @@ const PricingCard = ({primary}) => {
             })
         }
       </div>
-      <button className='w-full text-center bg-black text-white rounded-lg py-[10px] hover:bg-gray-800'>{pricingData?.buttonText}</button>
+      <button className={` w-full text-center  rounded-lg py-[10px] hover:bg-gray-800 ${primary ? 'bg-theme text-black': 'bg-black text-white'}`}>{pricingData?.buttonText}</button>
       
     </div>
   )

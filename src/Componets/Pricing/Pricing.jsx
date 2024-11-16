@@ -8,7 +8,7 @@ const Pricing = ({title}) => {
                 <h2 className='sm:text-[32px] md:text-[40px] font-[700] text-center mb-[50px] max-w-[500px] mx-auto'>{title}</h2>
             </div>
 
-            <div className='grid gap-1 container sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center'>
+            <div className='grid gap-1 container sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-y-[30px]'>
                 <PricingCard />
                 <PricingCard primary/>
                 <PricingCard />

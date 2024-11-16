@@ -6,12 +6,14 @@ import phoneIcon from '../../public/phone.png';
 import logoImg from '../../public/logo.png';
 import client from '../../public/clientImg1.jpg';
 import client2 from '../../public/clientImg2.jpg';
-import aboutImg from '../../public/about.webp';
 import serviceImg1 from '../../public/personalTraining.jpg';
 import serviceImg2 from '../../public/groupWorkout.jpg';
 import serviceImg3 from '../../public/stranghtTraining.jpg';
 import serviceImg4 from '../../public/nutritionCoaching.jpg';
 import serviceImg5 from '../../public/onlineCoaching.webp';
+import aboutImg1 from '../../public/about.webp'
+import aboutImg4 from '../../public/aboutImg4.jpg';
+import aboutImg5 from '../../public/aboutImg5.jpg';
 
 export const getDemoData = () => {
   
@@ -220,7 +222,11 @@ export const getDemoData = () => {
         title: 'About us',
         description: `Welcome to [Your Gym Name], your premier fitness destination dedicated to helping you achieve your health and wellness goals. Our state-of-the-art facilities, expert trainers, and personalized programs ensure that every workout is tailored to meet your unique needs. Whether you’re looking to build strength, lose weight, or improve overall fitness, we’ve got you covered.`,
         description2:'We believe in creating a supportive and motivating environment where everyone can thrive. Join us today and experience fitness like never before. Let’s work together to unlock your full potential!',
-        img: aboutImg
+        aboutImgList:[
+            aboutImg4,
+            aboutImg1,
+            aboutImg5,
+        ]
     }
     return {
         aboutData,

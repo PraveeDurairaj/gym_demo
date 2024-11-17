@@ -37,7 +37,7 @@ const Review = ({staticContent,title}) => {
   };
   return (
     <>
-    <div className='container'>
+    <div className='container' id='reviews'>
     <h2 className='sm:text-[32px] md:text-[40px] font-[700] text-center mb-6'>{title}</h2>
     </div>
     <div className="slider-container">
@@ -45,9 +45,7 @@ const Review = ({staticContent,title}) => {
         {
           staticContent?.map((item)=>{
             return(
-              <div>
               <ReviewCard data={item} key={item?.id}/>
-            </div>
             )
           })
         }

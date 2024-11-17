@@ -12,7 +12,7 @@ const Hero = ({staticContent}) => {
                   {staticContent?.headerAfterText && <span className='inline-blcok'>{staticContent?.headerAfterText}</span> } 
                 </h1>
                 <p className='text-white m-auto max-w-[800px]'>{staticContent?.subtext}</p>
-                <PrimaryButton buttonText={'Get in Touch'} containerClass={'mt-3'}/>
+                <PrimaryButton buttonText={'Get in Touch'} containerClass={'mt-3'} onClick/>
             </div>
         </div>
 

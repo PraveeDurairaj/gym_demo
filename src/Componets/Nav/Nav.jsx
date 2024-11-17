@@ -11,17 +11,17 @@ const Nav = ({ staticContent }) => {
             <div className='showMd hidden justify-between items-center text-white container'>
                 <div>
                     {
-                        staticContent?.logo ? <Image src={staticContent?.logo} className='w-[35px] h-[35px] rounded-full'></Image>
+                        staticContent?.logo ? <Image src={staticContent?.logo} alt='logo' className='w-[35px] h-[35px] rounded-full'></Image>
                             : <span className='text-theme'>Demo Site</span>
                     }
 
                 </div>
                 <div className='flex gap-[50px] items-center '>
                     {
-                        staticContent?.navList?.map((data) => {
+                        staticContent?.navList?.map((data,index) => {
                             return (
-                                data?.buttonText ? <> <PrimaryButton buttonText={data?.buttonText} /></> :
-                                    <a key={data?.id} href={data?.link} className='hover:text-theme'>{data?.text}</a>
+                                data?.buttonText ? <PrimaryButton buttonText={data?.buttonText} onClick key={index} /> :
+                                    <a key={index} href={data?.link} className='hover:text-theme'>{data?.text}</a>
                             )
                         })
                     }
@@ -30,7 +30,7 @@ const Nav = ({ staticContent }) => {
             <div className='flex justify-between'>
                 <div>
                     {
-                        staticContent?.logo ? <Image src={staticContent?.logo} className='w-[35px] h-[35px] rounded-full m-b-[15px] hidden showHidden'></Image>
+                        staticContent?.logo ? <Image src={staticContent?.logo} alt='logo' className='w-[35px] h-[35px] rounded-full m-b-[15px] hidden showHidden'></Image>
                             : <span className='text-theme hidden showHidden'>Demo Site</span>
                     }
 
@@ -44,7 +44,7 @@ const Nav = ({ staticContent }) => {
                 <div className=' flex  text-white  flex-col w-[250px]  h-full'>
                     <div className='flex justify-between mb-[20px]'>
                         {
-                            staticContent?.logo ? <Image src={staticContent?.logo} className='w-[35px] h-[35px] rounded-full m-b-[15px]'></Image>
+                            staticContent?.logo ? <Image src={staticContent?.logo} alt='logo' className='w-[35px] h-[35px] rounded-full m-b-[15px]'></Image>
                                 : <span className='text-theme'>Demo Site</span>
                         }
 
@@ -52,9 +52,9 @@ const Nav = ({ staticContent }) => {
                     </div>
                     <div className='flex gap-[15px] items-start flex-col '>
                         {
-                            staticContent?.navList?.map((data) => {
+                            staticContent?.navList?.map((data,index) => {
                                 return (
-                                    data?.buttonText ? <> <PrimaryButton buttonText={data?.buttonText} /></> :
+                                    data?.buttonText ? <PrimaryButton buttonText={data?.buttonText} onClick  key={index}/>:
                                         <a key={data?.id} href={data?.link} className='hover:text-theme'>{data?.text}</a>
                                 )
                             })

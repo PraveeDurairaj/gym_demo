@@ -4,13 +4,12 @@ import Tabs from 'react-bootstrap/Tabs';
 import ServicesCard from './ServicesCart';
 
 const Services = ({title,staticContent}) => {
-    console.log('test',staticContent)
     return (
         <>
-            <div className='container'>
+            <div className='container' id='services'>
                 <h2 className='sm:text-[32px] md:text-[40px] font-[700] text-center mb-[30px]'>{title}</h2>
             </div>
-            <div>
+            <div className='px-[10px]'>
                 <Tabs
                     defaultActiveKey="Strength Training"
                     id="uncontrolled-tab-example"

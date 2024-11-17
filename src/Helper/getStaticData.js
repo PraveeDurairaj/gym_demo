@@ -3,7 +3,6 @@ import linkedinIcon from '../../public/linkedin.png';
 import facebookIcon from '../../public/facebook.png';
 import locationIcon from '../../public/location.png';
 import phoneIcon from '../../public/phone.png';
-import logoImg from '../../public/logo.png';
 import client from '../../public/clientImg1.jpg';
 import client2 from '../../public/clientImg2.jpg';
 import serviceImg1 from '../../public/personalTraining.jpg';
@@ -16,39 +15,43 @@ import aboutImg4 from '../../public/aboutImg4.jpg';
 import aboutImg5 from '../../public/aboutImg5.jpg';
 
 export const getDemoData = () => {
-  
+
     const navData = {
         // logo: logoImg,
         navList: [
             {
                 id: 1,
                 text: 'home',
-                link: ''
+                link: '/'
             },
             {
                 id: 2,
                 text: 'Services',
-                link: ''
+                link: '#services'
             },
-            {
-                id: 3,
-                text: 'Reviews',
-                link: ''
+            {  id: 3,
+                text: 'Pricing',
+                link: '#pricing'
             },
             {
                 id: 4,
+                text: 'Reviews',
+                link: '#reviews'
+            },
+            {
+                id: 5,
                 buttonText: 'contact',
                 link: ''
             },
         ]
     }
     const heroData = {
-        headerBeforeText:'Sweat Today.',
-        colorText:'Shine',
-        headerAfterText:'Tomorrow.',
-        subtext:'Push yourself today for the results you deserve tomorrow. Every drop of sweat is a step closer to your goals. Transform your body, elevate your mindset, and own your strength.',
-        btnText:"Get Fit Now"
-        }
+        headerBeforeText: 'Sweat Today.',
+        colorText: 'Shine',
+        headerAfterText: 'Tomorrow.',
+        subtext: 'Push yourself today for the results you deserve tomorrow. Every drop of sweat is a step closer to your goals. Transform your body, elevate your mindset, and own your strength.',
+        btnText: "Get Fit Now"
+    }
     const trustData = [
         {
             id: 1,
@@ -60,21 +63,21 @@ export const getDemoData = () => {
             id: 2,
             blodText: "30+",
             subText: 'weekly class',
-            des: 'Our community growing fast'
+            des: 'Focus on Results Weekly'
         },
         {
-            id: 1,
+            id: 3,
             blodText: "10",
             subText: 'certified trainers',
-            des: 'Our community growing fast'
+            des: 'Results-Driven Coaching Approach'
         },
         {
-            id: 1,
+            id: 4,
             blodText: "99%",
             subText: 'custonmers satisfaction',
-            des: 'Our community growing fast'
+            des: 'Focused on Member Needs'
         },
-    
+
     ]
     const serviceData = [
         {
@@ -103,86 +106,90 @@ export const getDemoData = () => {
             img: serviceImg5
         }
     ]
-    const footerData = [ 
+    const footerData = [
         {
-            id: 1,
+            id: 40,
             fTitle: 'Demo',
             primary: true,
             fDescription: [
                 {
-                    id: 1,
+                    id: 2,
                     text: 'demo content  a weekly schedule of classes for every level. Whether you want to dial up the intensity or take a more relaxed approach, we’ve got a class with a spot just for you.'
                 },
                 {
-                    id: 2,
+                    id: 3,
                     text: 'Create your own personalized schedule by choosing the classes that suit your needs'
                 },
                 {
-                    id: 3,
+                    id: 4,
                     buttonText: 'Vist our recent work'
                 },
             ]
         },
         {
-            id: 2,
+            id: 10,
             fTitle: 'Important Links',
             fDescription: [
                 {
-                    id: 1,
+                    id: 5,
                     text: 'Home'
                 },
                 {
-                    id: 2,
+                    id: 6,
                     text: 'About'
                 },
                 {
-                    id: 3,
+                    id: 7,
                     text: 'Product',
                 },
                 {
-                    id: 4,
+                    id: 8,
                     text: 'Blog',
                 },
             ]
         },
         {
-            id: 3,
+            id: 20,
             fTitle: 'Quick Links',
             fDescription: [
                 {
-                    id: 1,
-                    text: 'Home'
+                    id: 9,
+                    text: 'Home',
+                    link:'/'
                 },
                 {
-                    id: 2,
-                    text: 'About'
+                    id: 10,
+                    text: 'About',
+                    link:'#about'
                 },
                 {
-                    id: 3,
-                    text: 'Product',
+                    id: 11,
+                    text: 'Services',
+                     link:'#services'
                 },
                 {
-                    id: 4,
-                    text: 'Blog',
+                    id: 12,
+                    text: 'Pricings Plans',
+                    link:"#pricing"
                 },
             ]
         },
         {
-            id: 4,
+            id: 30,
             fTitle: 'Address',
             fDescription: [
                 {
-                    id: 1,
+                    id: 13,
                     text: 'madurai tamilnadu',
                     icon: locationIcon,
                 },
                 {
-                    id: 2,
+                    id: 14,
                     text: '+91 8368379373',
                     icon: phoneIcon,
                 },
                 {
-                    id: 3,
+                    id: 15,
                     iconList: [
                         instaIcon,
                         linkedinIcon,
@@ -196,38 +203,80 @@ export const getDemoData = () => {
         {
             id: 1,
             img: client,
-            name: 'praveen',
-            review: 'achieve both physical and mental well-being. With this you can develop a strong physique that'
+            name: 'Jake Mitchell',
+            review: 'This gym has everything I need—state-of-the-art equipment, spacious workout areas, and helpful trainers. I’ve seen amazing results since I joined. Highly recommend for anyone serious about their fitness journey!'
         },
         {
-            id: 1,
+            id: 2,
             img: client2,
-            name: 'karthick',
-            review: 'achieve both physical and mental well-being. With this you can develop a strong physique that'
+            name: 'Olivia Brown',
+            review: 'I started at this gym as a beginner, and the trainers have been incredibly supportive. I’ve learned so much about proper form and technique. Plus, the gym is always clean and well-maintained!'
         },
         {
-            id: 1,
+            id: 3,
             img: client,
-            name: 'deepak',
+            name: ' Mark Stevens',
             review: 'achieve both physical and mental well-being. With this you can develop a strong physique that well-being. With this you can develop a strong physique that'
         },
         {
-            id: 1,
+            id: 4,
             img: client2,
-            name: 'praveen',
-            review: 'achieve both physical and mental well-being. With this you can develop a strong physique that well-being. With this you can develop a strong physique thatwell-being. With this you can develop a strong physique that'
+            name: 'Emily Clark',
+            review: 'The gym itself is great, and the personal trainers are top-notch. The only thing I would improve is the parking situation during peak hours, but other than that, I love coming here!'
         },
     ]
     const aboutData = {
         title: 'About us',
         description: `Welcome to [Your Gym Name], your premier fitness destination dedicated to helping you achieve your health and wellness goals. Our state-of-the-art facilities, expert trainers, and personalized programs ensure that every workout is tailored to meet your unique needs. Whether you’re looking to build strength, lose weight, or improve overall fitness, we’ve got you covered.`,
-        description2:'We believe in creating a supportive and motivating environment where everyone can thrive. Join us today and experience fitness like never before. Let’s work together to unlock your full potential!',
-        aboutImgList:[
+        description2: 'We believe in creating a supportive and motivating environment where everyone can thrive. Join us today and experience fitness like never before. Let’s work together to unlock your full potential!',
+        aboutImgList: [
             aboutImg4,
             aboutImg1,
             aboutImg5,
         ]
     }
+    const pricingPlansData = [
+        {
+            planName: "Basic Membership",
+            price: "$29",
+            description: "Ideal for occasional gym-goers.",
+            features: [
+                "Access to all gym equipment",
+                "Group classes included",
+                "1 personal training session/month",
+                "Locker room & shower access"
+            ],
+            contactButton: "Get Started"
+        },
+        {
+            planName: "Premium Membership",
+            price: "$79",
+            description: "For committed fitness goals and results.",
+            features: [
+                "All gym facilities included",
+                "Unlimited group & private classes",
+                "4 personal training sessions/month",
+                "Priority booking for classes",
+                "Access to spa and wellness center"
+            ],
+            contactButton: "Get Started",
+            primary: true
+        },
+        {
+            planName: "Standard Membership",
+            price: "$49",
+            description: "Perfect for regular fitness enthusiasts.",
+            features: [
+                "All equipment access",
+                "Unlimited group classes",
+                "2 personal training sessions/month",
+                "Free Wi-Fi and water refill",
+                "Discount on store products"
+            ],
+            contactButton: "Get Started"
+        },
+
+    ];
     return {
         aboutData,
         reviewData,
@@ -235,8 +284,8 @@ export const getDemoData = () => {
         footerData,
         trustData,
         serviceData,
-        heroData
-        
+        heroData,
+        pricingPlansData
     }
 }
 

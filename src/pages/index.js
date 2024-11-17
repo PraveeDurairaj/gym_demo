@@ -22,25 +22,25 @@ import {getDemoData} from '../Helper/getStaticData';
 // });
 
 export default function Home() {
-  const {aboutData, reviewData,navData,footerData,trustData,serviceData,heroData} = getDemoData();
+  const {aboutData, reviewData,navData,footerData,trustData,serviceData,heroData,pricingPlansData} = getDemoData();
   return (
     <>
       <Nav staticContent={navData} />
       <Hero staticContent={heroData} />
-      <div className="my-[50px]"></div>
+      <div className="my-[70px]"></div>
       <Turst staticContent={trustData}/>
-      <div className="my-[50px]"></div>
+      <div className="my-[70px]"></div>
       <ServicesCard staticContent={aboutData} aboutSection />
-      <div className="my-[50px]"></div>
+      <div className="my-[70px]"></div>
       <Services title={"Our Services"} staticContent={serviceData} />
-      <div className="my-[50px]"></div>
-      <Pricing title = {'Choose Right Plan to get Stronger'}/>
-      <div className="my-[50px]"></div>
+      <div className="my-[70px]"></div>
+      <Pricing title = {'Choose Right Plan to get Stronger'} staticContent={pricingPlansData}/>
+      <div className="my-[70px]"></div>
       <Review
        staticContent={reviewData}
        title={'Real stories Real results'}
        />
-      <div className="my-[50px]"></div>
+      <div className="my-[70px]"></div>
       <Footer staticContent={footerData} />
     </>
   );

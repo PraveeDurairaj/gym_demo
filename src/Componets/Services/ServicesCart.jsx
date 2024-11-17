@@ -14,9 +14,8 @@ const ServicesCard = ({ staticContent, changeOrder, aboutSection }) => {
         fade:true,
         autoplay: true,
     };
-    console.log(staticContent?.aboutImgList)
     return (
-        <div className={`${aboutSection ? 'bg-transparent' : 'bg-black text-white'}  p-3`}>
+        <div className={`${aboutSection ? 'bg-transparent' : 'bg-black text-white rounded-[10px]'}  p-3`} id={aboutSection && 'about' }>
             <div className='container grid sm:grid-cols-1 md:grid-cols-2 sm:gap-3 md:gap-5 items-center'>
                 <div className={changeOrder ? 'sm:order-2 md:order-2' : 'sm:order-2 md:order-1'}>
                     <h5 className=' font-[700] sm:text-[28px]  md:text-[32px] mb-[20px] themeLinear'>{staticContent?.title}</h5>

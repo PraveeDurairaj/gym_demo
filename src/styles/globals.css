@@ -22,9 +22,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.footerIcon{
-  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(923%) hue-rotate(87deg) brightness(93%) contrast(87%);
-}
 .hero{
   background: url('../../public/hero2.jpg');
 }
@@ -33,7 +30,9 @@ background: linear-gradient(to right, #d7fb0e 39%, #d2e735 50%, #f1fcb3 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 display: inline;
-
+}
+.themeFilterColor{
+  filter: brightness(0) saturate(100%) invert(90%) sepia(23%) saturate(2816%) hue-rotate(357deg) brightness(102%) contrast(105%);
 }
 @media (max-width:991px) and (min-width:375px) {
   .showHidden{

@@ -69,7 +69,7 @@ export const getDemoData = () => {
             id: 3,
             blodText: "10",
             subText: 'certified trainers',
-            des: 'Results-Driven Coaching Approach'
+            des: 'Results-Driven Coaching'
         },
         {
             id: 4,
